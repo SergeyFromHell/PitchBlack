@@ -46,16 +46,32 @@ for _, name in pairs(spitters) do
     resistances[name] = settings.startup["pitch-" .. name .. "-resistance"].value
 end
 
+local function adjust_damage(effects)
+    if not effects then return end
+    if effects.damage then
+        effects.damage.amount = math.ceil(effects.damage.amount * BiterDamageScale)
+    elseif effects[0] or effects[1]then
+        for _, effect in pairs(effects) do
+            if effect.damage then
+                effect.damage.amount = math.ceil(effect.damage.amount * BiterDamageScale)
+            end
+        end
+    end
+end
+
 for name, unit in pairs(data.raw["unit"]) do
     if string.find(name, "biter") then
         unit.pollution_to_join_attack = math.ceil(unit.pollution_to_join_attack * EnemySwarmScale)
         unit.max_health = math.ceil(unit.max_health * EnemyHealthScale)
-        if unit.attack_parameters.ammo_type.action.action_delivery then
-            unit.attack_parameters.ammo_type.action.action_delivery.target_effects.damage.amount =
-                math.ceil(unit.attack_parameters.ammo_type.action.action_delivery.target_effects.damage.amount * BiterDamageScale)
-        elseif unit.attack_parameters.ammo_type.action[1] then
-            for _, action in pairs(unit.attack_parameters.ammo_type.action) do
-                action.action_delivery.target_effects.damage.amount = math.ceil(action.action_delivery.target_effects.damage.amount * BiterDamageScale)
+        local ammo_action = unit.attack_parameters.ammo_type.action
+        if ammo_action.action_delivery then
+            local action = ammo_action.action_delivery
+            if action.target_effects then
+                adjust_damage(action.target_effects)
+            end
+        elseif ammo_action[1] then
+            for _, action in pairs(ammo_action) do
+                adjust_damage(action.action_delivery.target_effects)
             end
         end
         unit.movement_speed = unit.movement_speed * EnemyMovementScale
