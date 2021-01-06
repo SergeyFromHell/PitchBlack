@@ -97,7 +97,7 @@ Time.DuskPhaseConfig =
     IsTransition = true,
 
     --Message(s) that appear for all players
-    Warnings = {'The sun is beggining to set!'},
+    Warnings = {{"pitch-black.dusk-start"}},
 
     --Data that has conditions that need to be met to be valid, such as cycles complete
     VariableData =
@@ -123,7 +123,7 @@ Time.NightPhaseConfig =
     IsTransition = false,
 
     --Message(s) that appear for all players
-    Warnings = {'Night has begun!'},
+    Warnings = {{"pitch-black.night-begins"}},
 
     --Data that has conditions that need to be met to be valid, such as cycles complete
     VariableData =
@@ -152,7 +152,7 @@ Time.DawnPhaseConfig =
     IsTransition = true,
 
     --Message(s) that appear for all players
-    Warnings = {'The sun is rising!'},
+    Warnings = {{"pitch-black.dawn-start"}},
 
     --Data that has conditions that need to be met to be valid, such as cycles complete
     VariableData =

@@ -50,11 +50,11 @@ Biters.Phases =
       Title = 'Night Craze',
 
       --Text message(s) displayed when swapping to this phase
-      StartWarnings = {'The biters have begun swarming the landscape!'},
+      StartWarnings = {{"pitch-black.swarm-start"}},
       --Hint message
-      HintWarnings = {'Hitting them now will reduce their strength.', 'However, pollution output is agitating them greatly!'},
+      HintWarnings = {{"pitch-black.swarm-hint1"}, {"pitch-black.swarm-hint2"}},
       --Text message(s) displayed when repeating this phase
-      ContinueWarnings = {'The biters continue to swarm the landscape.'},
+      ContinueWarnings = {{"pitch-black.swarm-continue"}},
 
       VariableData =
       {
@@ -179,7 +179,7 @@ Biters.Phases =
           MaxDuration = 720,
 
           --Extra messages that pop up when the phase begins
-          StartExtraWarnings = {'The biters are more active than usual.'},
+          StartExtraWarnings = {{"pitch-black.swarm-more-active"}},
           ContinueExtraWarnings = nil,
 
           --Whether the phase can repeat
@@ -274,7 +274,7 @@ Biters.Phases =
           MaxDuration = 720,
 
           --Extra messages that pop up when the phase begins
-          StartExtraWarnings = {'The biters are much more active than usual.'},
+          StartExtraWarnings = {{"pitch-black.swarm-extra-active"}},
           ContinueExtraWarnings = nil,
 
           --Whether the phase can repeat
@@ -351,11 +351,11 @@ Biters.Phases =
       Title = 'Night Growth',
 
       --Text message(s) displayed when swapping to this phase
-      StartWarnings = {'The biter swarm is swelling as they mass around their nests.'},
+      StartWarnings = {{"pitch-black.grow-start"}},
       --Hint message
-      HintWarnings = {'Avoid attacking their nests or you risk provoking a stronger response.', 'Pollution output is agitating them greatly!'},
+      HintWarnings = {{"pitch-black.grow-hint1"}, {"pitch-black.grow-hint2"}},
       --Text message(s) displayed when repeating this phase
-      ContinueWarnings = {'The biters continue to mass around their nests.'},
+      ContinueWarnings = {{"pitch-black.grow-continue"}},
 
       VariableData =
       {
@@ -480,7 +480,7 @@ Biters.Phases =
           MaxDuration = 900,
 
           --Extra messages that pop up when the phase begins
-          StartExtraWarnings = {'The biters are more active than usual.'},
+          StartExtraWarnings = {{"pitch-black.swarm-more-active"}},
           ContinueExtraWarnings = nil,
 
           --Whether the phase can repeat
@@ -557,11 +557,11 @@ Biters.Phases =
       Title = 'Night Evolution',
 
       --Text message(s) displayed when swapping to this phase
-      StartWarnings = {'The biters have begun evolving rapidly!'},
+      StartWarnings = {{"pitch-black.evolution-start"}},
       --Hint message
-      HintWarnings = {'Hit them NOW before they grow in strength.'},
+      HintWarnings = {{"pitch-black.evolution-hint1"}},
       --Text message(s) displayed when repeating this phase
-      ContinueWarnings = {'The biters are continueing to evolve rapidly!'},
+      ContinueWarnings = {{"pitch-black.evolution-continue"}},
 
       VariableData =
       {
@@ -763,11 +763,11 @@ Biters.Phases =
       Title = 'Disorientated',
 
       --Text message(s) displayed when swapping to this phase
-      StartWarnings = {'The biters are disorientated!'},
+      StartWarnings = {{"pitch-black.disoriented-start"}},
       --Hint message
-      HintWarnings = {'Hit them now while they are weak.'},
+      HintWarnings = {{"pitch-black.disoriented-hint1"}},
       --Text message(s) displayed when repeating this phase
-      ContinueWarnings = {'The biters are continueing to flounder.'},
+      ContinueWarnings = {{"pitch-black.disoriented-continue"}},
 
       VariableData =
       {
@@ -874,11 +874,11 @@ Biters.Phases =
       Title = 'Dormant',
 
       --Text message(s) displayed when swapping to this phase
-      StartWarnings = {'Biter activity has decreased significantly.'},
+      StartWarnings = {{"pitch-black.dormant-start"}},
       --Hint message
-      HintWarnings = {'Attacking & polluting them may provoke them.'},
+      HintWarnings = {{"pitch-black.dormant-hint1"}},
       --Text message(s) displayed when repeating this phase
-      ContinueWarnings = {'Biter activity continues to remain very low.'},
+      ContinueWarnings = {{"pitch-black.dormant-continue"}},
 
       VariableData =
       {
@@ -985,11 +985,11 @@ Biters.Phases =
       Title = 'Aggitated',
 
       --Text message(s) displayed when swapping to this phase
-      StartWarnings = {'The biters have become aggitated.'},
+      StartWarnings = {{"pitch-black.aggitated-start"}},
       --Hint message
-      HintWarnings = {'Attacking & polluting them will continue to provoke them.'},
+      HintWarnings = {{"pitch-black.aggitated-hint1"}},
       --Text message(s) displayed when repeating this phase
-      ContinueWarnings = {'The biters are aggitated.'},
+      ContinueWarnings = {{"pitch-black.aggitated-continue"}},
 
       VariableData =
       {

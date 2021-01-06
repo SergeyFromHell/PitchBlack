@@ -29,8 +29,8 @@ end)
 script.on_nth_tick(peaceful_ticks, function(event)
     local _, _ = pcall(function()
         if event.tick > 0 then
-            game.print("Peaceful mode deactivated.")
-            game.print("Test " .. event.tick .. " nth " .. event.nth_tick)
+            game.print({"pitch-black.peaceful"})
+            --game.print("Test " .. event.tick .. " nth " .. event.nth_tick)
             script.on_nth_tick(peaceful_ticks, nil)
         end
     end)
