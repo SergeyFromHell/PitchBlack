@@ -1,5 +1,12 @@
 data:extend{
     {
+        type = "bool-setting",
+        name = "pitch-display-messages",
+        setting_type = "runtime-per-user",
+        default_value = true,
+        order = "a"
+    },
+    {
         --Desc: Number of real seconds in a game day
         --Default: 600 (10 minutes)
         --Note: A single day is not necessarily the cycle of the sun... E.G there could be multiple days with the sun up.

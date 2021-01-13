@@ -2,7 +2,11 @@ require 'Libs/Utility/math'
 require 'Libs/Utility/logger'
 
 function MessageAll(s) --luacheck: allow defined top
-	game.print(s)
+    for _, player in pairs(game.players) do
+        if player.mod_settings["pitch-display-messages"].value then
+            player.print(s)
+        end
+    end
 end
 
 function DeepCopy(orig) --luacheck: allow defined top
