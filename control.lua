@@ -30,6 +30,9 @@ script.on_nth_tick(peaceful_ticks, function(event)
     local _, _ = pcall(function()
         if event.tick > 0 then
             game.print({"pitch-black.peaceful"})
+            for _, surface in pairs(game.surfaces) do
+                surface.peaceful_mode = false
+            end
             --game.print("Test " .. event.tick .. " nth " .. event.nth_tick)
             script.on_nth_tick(peaceful_ticks, nil)
         end
